@@ -1,0 +1,2 @@
+npm i devextreme-angular --save
+npm i devextreme --save

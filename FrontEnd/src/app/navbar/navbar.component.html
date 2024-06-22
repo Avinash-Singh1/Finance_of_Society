@@ -1,0 +1,75 @@
+<style>
+  .nav-link {
+    color: #869fe4;
+    font-size: larger;
+  }
+
+  .nav-link:hover {
+    color: aliceblue;
+  }
+
+
+  .dropdown-toggle {
+    margin-top: 13px;
+      cursor: pointer;
+      color: #007bff; /* Change this to the desired text color */
+      text-decoration: none; /* Optional: Adds an underline to indicate it's clickable */
+      background: none; /* Removes the background */
+      border: none; /* Removes the border */
+      padding: 0; /* Removes padding */
+
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0; /* Remove the gap so it aligns nicely */
+    }
+    .dropdown-toggle::after {
+      display: none !important; /* Remove the default dropdown arrow */
+    }
+</style>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mygrid">
+
+
+  <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link " routerLink="#">Society</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="#" (click)="GetUsers()">Installement Reports</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/nextdate" (click)="GetUsers()">Next Due Date</a>
+      </li>
+      <li class="nav-item">
+        <!-- <a class="nav-link" routerLink="/nextdate" (click)="GetUsers()">Next Due Date</a> -->
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Reports
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Installement Reports</a>
+            <a class="dropdown-item" href="#">Installement Breaches</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="#" (click)="GetUsers()">Installement Breaches</a>
+      </li> -->
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="" (click)="logout()">Logout</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>

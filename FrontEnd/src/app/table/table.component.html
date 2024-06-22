@@ -1,0 +1,32 @@
+
+<dx-data-grid
+ [dataSource]="finalData"
+ [showBorders]="true"
+ [showColumnLines]="false"
+  [showRowLines]="true"
+  [showBorders]="true"
+  [rowAlternationEnabled]="true"
+ >
+ <!-- this is to apply search filter to each columns  -->
+ <!-- <dxo-filter-row visible="true" applyFilter="auto"></dxo-filter-row> -->
+ <dxo-paging [enabled]="true"></dxo-paging>
+ <dxo-editing
+   mode="row"
+   [allowUpdating]="true"
+   [allowDeleting]="true"
+   [allowAdding]="true"
+ >
+
+ <dxi-column dataField="OrderNumber">
+  
+ </dxi-column>
+
+ </dxo-editing>
+ <dxo-search-panel [visible]="true"></dxo-search-panel>
+ <dxo-paging [pageSize]="10"></dxo-paging>
+ <dxo-group-panel [visible]="true"></dxo-group-panel>
+</dx-data-grid>
+
+
+
+  

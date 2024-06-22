@@ -1,0 +1,19 @@
+.pricing-block{
+    background-color: rgb(174, 248, 151);
+    margin: 2px;
+    text-align: left;
+    padding: 4px;
+    border-radius: 8px;
+}
+.title-box{
+    background-color: rgb(224, 169, 97);
+    margin-top: 12px;
+    border-radius: 4px;
+    text-align: center;
+}
+.mygrid{
+    margin-left: 50px;
+}
+.url{
+    text-decoration: none;
+}
