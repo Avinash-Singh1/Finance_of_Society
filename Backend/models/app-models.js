@@ -1,8 +1,33 @@
 import { Sequelize } from "sequelize";
 
-export const jk_finance_db = new Sequelize("society","root","avinash",{
-    dialect:"mysql"
-})
+const rdsConfig = {
+    database: "society",
+    username: "admin",
+    password: "admin123",
+    host: "mydb.cr0k6kqm0z49.ap-south-1.rds.amazonaws.com", // e.g., "your-instance-name.region.rds.amazonaws.com"
+    port: 3306, // Default MySQL port
+    dialect: "mysql",
+    logging: false, // Disable logging; set to true if you want to see SQL queries
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000
+    }
+  };
+  
+
+// export const jk_finance_db = new Sequelize("society","admin","admin123",{
+//     dialect:"mysql"
+// })
+
+export const jk_finance_db = new Sequelize(rdsConfig.database, rdsConfig.username, rdsConfig.password, {
+    host: rdsConfig.host,
+    port: rdsConfig.port,
+    dialect: rdsConfig.dialect,
+    pool: rdsConfig.pool,
+    logging: rdsConfig.logging
+  });
 
 export const jk_finance_User=jk_finance_db.define('register',{
    

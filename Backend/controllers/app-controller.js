@@ -39,7 +39,7 @@ export const registerfun = async (req, res) => {
       // Store username, salt, and hash in the 'users' array (replace with database storage)
       var queryData = '"'.replace(/"/g, "'") + JSON.stringify(usersdata) + '"'.replace(/"/g, "'");
 
-      const results= await jk_finance_db.query('CALL jk_finance.insert_in_register(' + queryData + ');');
+      const results= await jk_finance_db.query('CALL insert_in_register(' + queryData + ');');
   
     //   res.status(200).json({ "Register": "register Success" });
    
@@ -256,7 +256,7 @@ console.log("Transaction");
 
 var queryData = '"'.replace(/"/g, "'") + JSON.stringify(req.body) + '"'.replace(/"/g, "'");
 
-const results= await jk_finance_db.query('CALL jk_finance.GetTransactionDetails();');
+const results= await jk_finance_db.query('CALL GetTransactionDetails();');
 //   res.status(200).json({ "Register": "register Success" });
 res.status(201).json( results);
 
@@ -267,7 +267,7 @@ console.log("Transaction");
 // Generate salt and hash the password
 var queryData = '"'.replace(/"/g, "'") + JSON.stringify(req.body) + '"'.replace(/"/g, "'");
 
-const results= await jk_finance_db.query('CALL jk_finance.Getloanreport();');
+const results= await jk_finance_db.query('CALL Getloanreport();');
 //   res.status(200).json({ "Register": "register Success" });
 res.status(201).json( results);
 
@@ -276,7 +276,7 @@ export const postpaymentdetails = async (req, res) => {
   console.log("postpaymentdetails",req.body);
   // Generate salt and hash the password
   var queryData = '"'.replace(/"/g, "'") + JSON.stringify(req.body) + '"'.replace(/"/g, "'");
-  const results= await jk_finance_db.query('CALL jk_finance.postpaymentdetails(' + queryData + ');');
+  const results= await jk_finance_db.query('CALL postpaymentdetails(' + queryData + ');');
   //   res.status(200).json({ "Register": "register Success" });
   res.status(201).json( results);
 
