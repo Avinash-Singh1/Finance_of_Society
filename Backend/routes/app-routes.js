@@ -10,7 +10,7 @@ router.use(cookieParser());
 
 // get request
 router.get("/",rootFun);
-router.get("/api/cookie",cookieval);
+router.post("/api/cookie",cookieval);
 
 
 // Post request

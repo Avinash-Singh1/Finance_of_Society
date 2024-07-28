@@ -17,17 +17,17 @@ const rdsConfig = {
   };
   
 
-// export const jk_finance_db = new Sequelize("society","admin","admin123",{
-//     dialect:"mysql"
-// })
+export const jk_finance_db = new Sequelize("society","root","avinash",{
+    dialect:"mysql"
+})
 
-export const jk_finance_db = new Sequelize(rdsConfig.database, rdsConfig.username, rdsConfig.password, {
-    host: rdsConfig.host,
-    port: rdsConfig.port,
-    dialect: rdsConfig.dialect,
-    pool: rdsConfig.pool,
-    logging: rdsConfig.logging
-  });
+// export const jk_finance_db = new Sequelize(rdsConfig.database, rdsConfig.username, rdsConfig.password, {
+//     host: rdsConfig.host,
+//     port: rdsConfig.port,
+//     dialect: rdsConfig.dialect,
+//     pool: rdsConfig.pool,
+//     logging: rdsConfig.logging
+//   });
 
 export const jk_finance_User=jk_finance_db.define('register',{
    

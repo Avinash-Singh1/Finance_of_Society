@@ -34,7 +34,7 @@
 
 
   <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto" style="padding-left: 34px;gap: 10px;">
       <li class="nav-item active">
         <a class="nav-link " routerLink="#">Society</a>
       </li>
@@ -45,21 +45,12 @@
         <a class="nav-link" routerLink="#" (click)="GetUsers()">Installement Reports</a>
       </li> -->
       <li class="nav-item">
-        <a class="nav-link" routerLink="/nextdate" (click)="GetUsers()">Next Due Date</a>
+        <a class="nav-link" routerLink="/nextdate" (click)="GetUsers()">Due Date</a>
       </li>
       <li class="nav-item">
         <!-- <a class="nav-link" routerLink="/nextdate" (click)="GetUsers()">Next Due Date</a> -->
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Reports
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Installement Reports</a>
-            <a class="dropdown-item" href="#">Installement Breaches</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </div>
+        <a class="nav-link" routerLink="/nextdate" (click)="GetUsers()">Reports</a>
+
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" routerLink="#" (click)="GetUsers()">Installement Breaches</a>

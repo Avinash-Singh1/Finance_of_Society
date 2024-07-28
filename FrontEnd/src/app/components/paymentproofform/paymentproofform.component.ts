@@ -20,7 +20,7 @@ export class PaymentproofformComponent {
 
   getData(val: any) {
     
-    // console.log('val:', val);
+    console.log('val:', val);
     // val['images'] =  this.drugLicenseEncodedImage[0];
     // console.log('drugLicenseEncodedImage:', this.drugLicenseEncodedImage);
     this.http.post('/api/postpaymentdetails', val).subscribe((x) => {

@@ -3,7 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboredComponent } from './dashbored/dashbored.component';
 import { TableComponent } from './table/table.component';
-import { authGuard } from './auth.guard';
+import { authguardGuard } from './guards/authguard.guard'; 
 import { LoansComponent } from './components/loans/loans.component';
 import { UsersComponent } from './components/users/users.component';
 import { AmountsComponent } from './components/amounts/amounts.component';
@@ -31,42 +31,60 @@ export const routes: Routes = [
         path:"login",component:LoginComponent
     },
     {
-        path:"register",component:RegisterComponent, canActivate:[authGuard]
+        path:"register",component:RegisterComponent, canActivate:[authguardGuard]
     },
     {
         path:"dashboared",component:DashboredComponent
-        // , canActivate:[authGuard]
+        , canActivate:[authguardGuard]
     },
     {
         path:"userdash",component:UserdashComponent
-        // , canActivate:[authGuard]
+        , canActivate:[authguardGuard]
     },
     {
         path:"table",component:TableComponent
+        , canActivate:[authguardGuard]
+
     },
     {
         path:"transaction",component:TansactionsComponent
+        , canActivate:[authguardGuard]
+
     },
     {
         path:"loan",component:LoansComponent
+        , canActivate:[authguardGuard]
+
     }
     ,
     {
         path:"user",component:UsersComponent
+        , canActivate:[authguardGuard]
+
     },
     {
         path:"amount",component:AmountsComponent
+        , canActivate:[authguardGuard]
+
     },
     {
         path:"payments",component:PaymentsComponent
+        , canActivate:[authguardGuard]
+
     },
     {
         path:"profile",component:ProfileComponent
+        , canActivate:[authguardGuard]
+
     },
     {
         path:"nextdate",component:NextduedateComponent
+        , canActivate:[authguardGuard]
+
     },
     {
         path:"paympentpf",component:PaymentproofformComponent
+        , canActivate:[authguardGuard]
+
     }
 ];

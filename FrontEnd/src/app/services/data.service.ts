@@ -83,8 +83,8 @@ export class DataService {
     return this.http.post("/api/loanreport", {});
   }
 
-  getcookieValue(){
-    return this.http.get("/api/cookie");
+  getcookieValue(): Observable<any> {
+    return this.http.post("/api/cookie",{});
 
   }
   getpostdata(){
